@@ -1,7 +1,7 @@
 const admin = require("firebase-admin");
 
-const base64 = process.env.FIREBASE_SERVICE_ACCOUNT_KEY_B64;
-if (!base64) throw new Error("FIREBASE_SERVICE_ACCOUNT_KEY_B64 is missing");
+const base64 = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
+if (!base64) throw new Error("FIREBASE_SERVICE_ACCOUNT_KEY is missing");
 
 const serviceAccount = JSON.parse(
   Buffer.from(base64, "base64").toString("utf-8")
